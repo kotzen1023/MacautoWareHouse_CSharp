@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/enter_warehouse_list_container">
+
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+		<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="6"
+        android:id="@+id/barCodeLayout">
+        <EditText
+            android:id="@+id/barCode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/entering_warehouse_wait_for_scan_hint"
+            android:singleLine="true" />
+    <!--Button
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:text="Ok"/-->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <!--ExpandableListView
+            android:id="@+id/listViewExpand"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+            android:divider="@android:color/black"
+            android:dividerHeight="0.5dp" /-->
+
+		<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/inspectedRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </android.support.v7.widget.RecyclerView>
+                <!--TextView
+                    android:id="@+id/textViewTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="total count"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center"/-->
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:id="@+id/layoutBottom"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/btnEnteringWarehouseScan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/entering_warehouse_rescan"
+                android:visibility="gone" />
+            <Button
+                android:id="@+id/btnEnteringWarehouseConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/entering_warehouse_confirm"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+	</LinearLayout>	
+
+    
+</RelativeLayout>
